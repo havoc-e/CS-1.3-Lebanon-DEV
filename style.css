@@ -316,11 +316,11 @@ th {
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: #00ff88;
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #00ff88;
 }
 
 input:checked+.slider:before {
@@ -406,21 +406,23 @@ input:checked+.slider:before {
 
 
 .setting-row {
-  display: block;
-  align-items: center;
-  justify-content: space-between;
-  width: 320px;              /* pick a width that fits your form */
-  margin: 10px auto;
+    /* display: flex; */
+    /* align-items: center; vertically center label and switch */
+    /* justify-content: space-between; push them to opposite ends */
+    /* width: 100%; */
+    /* max-width: 320px; */
+    margin: 10px 0px;
+    gap: 100px; /* spacing between label and switch */
 }
 
 .setting-label {
-  transition: color 0.25s ease, transform 0.25s ease;
-  display: inline-block;
-  color: #999;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap; /* keep label text on one line */
 }
 
 .setting-label.enabled {
-  color: #4CAF50;          /* green when ON */
+  color: #00ff88;          /* green when ON */
   transform: scale(1.01);  /* subtle pop */  
   text-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
 }
