@@ -414,11 +414,12 @@ input:checked+.slider:before {
     margin-bottom: 15px;
 }
 
-.setting-label {
+.setting-label, .switch{
     font-size: 1.2rem;
     font-weight: bold;
     white-space: nowrap;
-    /* keep label text on one line */
+    display: flex;
+    align-items: center;      
 }
 
 .setting-label.enabled {
