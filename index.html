@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,54 +13,89 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
     <title>CS1.3 Lebanon - Match Booking</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-    
-
-    <!-- Load external CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-<div id="loadingOverlay" style="display:none;">
-    <div class="spinner"></div>
-</div>
-
-<div class="row">
-    <div class="box"><h1 class="page-title">Counter-Strike 1.3 Lebanon</h1></div>
-</div>
-
-<div class="wiss-console">:: by WISS ::</div>
-
-<div class="main-container">
-    <div id="booking" class="card">
-        <h2 id="bookMatchTitle">Book a Match</h2>
-        <input id="team1" type="text" placeholder="Team 1">
-        <input id="team2" type="text" placeholder="Team 2">
-
-        <div class="server-buttons" id="serverButtons">
-            <button class="server-button" data-server="1" id="server1Btn">Server 1</button>
-            <button class="server-button" data-server="2" id="server2Btn">Server 2</button>
-            <button class="server-button" data-server="3" id="server3Btn">Server 3</button>
-            <button class="server-button" data-server="4" id="server4Btn">Server 4</button>
-            <button class="server-button" data-server="5" id="server5Btn">Server 5</button>
-            <button class="server-button" data-server="Ghadab" id="server6Btn">Server Ghadab</button>
-        </div>
-
-        <div id="timeButtons" class="time-buttons"></div>
-        <button id="bookMatchBtn">Book Match</button>
+    <div id="loadingOverlay" style="display:none;">
+        <div class="spinner"></div>
     </div>
-</div>
 
-<div class="server-tables" id="serverTables"></div>
-<button id="resetMatchesBtn" onclick="resetAllMatches()">Reset All Matches</button>
+    <div class="row">
+        <div class="box">
+            <h1 class="page-title">Counter-Strike 1.3 Lebanon</h1>
+        </div>
+    </div>
 
-<script type="module" src="script.js"></script>
+    <div class="wiss-console">:: by WISS ::</div>
+
+    <div class="main-container">
+        <div id="booking" class="card">
+            <h2 id="bookMatchTitle">Book a Match</h2>
+            <input id="team1" type="text" placeholder="Team 1">
+            <input id="team2" type="text" placeholder="Team 2"><br>
+
+            <div class="setting-row">
+                <label id="cheatsLabel" for="cheatsSwitch" class="setting-label">Cheats: 0</label>
+                <label class="switch">
+                    <input type="checkbox" id="cheatsSwitch" checked>
+                    <span class="slider round"></span>
+                </label><br>
+            </div>
+
+            <!-- <div class="setting-row">
+            <label id="airmoveLabel" for="airmoveSwitch" class="setting-label">Airmove & Airaccelerate: 10</label>
+            <label class="switch">
+                <input type="checkbox" id="airmoveSwitch">
+                <span class="slider round"></span>
+            </label><br><br>
+            </div> -->
+
+            <!-- <div class="server-buttons" id="serverButtons">
+                <button class="server-button" data-server="1" id="server1Btn">Server 1</button>
+                <button class="server-button" data-server="2" id="server2Btn">Server 2</button>
+                <button class="server-button" data-server="3" id="server3Btn">Server 3</button>
+                <button class="server-button" data-server="4" id="server4Btn">Server 4</button>
+                <button class="server-button" data-server="5" id="server5Btn">Server 5</button>
+                <button class="server-button" data-server="6" id="server6Btn">Server 6</button>
+                <button class="server-button" data-server="7" id="server7Btn">Server 7</button>
+                <button class="server-button" data-server="8" id="server8Btn">Server 8</button>
+                <button class="server-button" data-server="9" id="server9Btn">Server 9</button>
+                <button class="server-button" data-server="10" id="server10Btn">Server 10<span> Cheats 0</span></button>
+                <button class="server-button" data-server="11" id="server11Btn">Server 11</button>
+                <button class="server-button" data-server="12" id="server12Btn">Server 12</button>
+                <button class="server-button" data-server="13" id="server12Btn">Server 13</button>
+                <button class="server-button" data-server="14" id="server12Btn">Server 14</button>
+                <button class="server-button" data-server="15" id="server15Btn">Server 15</button>
+                <button class="server-button" data-server="16" id="server16Btn">Server 16</button>
+                <button class="server-button" data-server="17" id="server17Btn">Server 17</button>
+                <button class="server-button" data-server="18" id="server18Btn">Server 18</button>
+                <button class="server-button" data-server="19" id="server19Btn">Server 19</button>
+                <button class="server-button" data-server="20" id="server20Btn">Server 20</button>
+                <button class="server-button" data-server="21" id="server21Btn">Server 21</button>
+                <button class="server-button" data-server="22" id="server22Btn">Server 22</button>
+                <button class="server-button" data-server="23" id="server23Btn">Server 23</button>
+                <button class="server-button" data-server="Ghadab" id="serverGhadabBtn">Server Ghadab</button>
+            </div> -->
+
+            <div id="timeButtons" class="time-buttons"></div>
+            <button id="bookMatchBtn">⚡Book Match⚡</button>
+        </div>
+    </div>
+
+    <div class="server-tables" id="serverTables"></div>
+    <button id="resetMatchesBtn" onclick="resetAllMatches()">Reset All Matches</button>
+
+    <script type="module" src="script.js"></script>
 </body>
 
-<footer style="text-align:center; padding:20px; margin-top:10px; margin-bottom:30px; font-size:0.8rem; color:black;">
-  Developed by H A V O C | © 2025 All rights reserved
+<footer
+    style="text-align:center; padding:20px; margin-top:10px; margin-bottom:30px; font-size:0.8rem; color:rgb(255, 255, 255);">
+    Developed by HAVOC | © 2026 All rights reserved
 </footer>
+
 
 </html>
